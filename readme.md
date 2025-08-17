@@ -103,7 +103,7 @@ The MarketSafeAI backend is a modular Express.js REST API that powers authentica
    ```sh
    npm start
    ```
-5. The API will be available at [http://localhost:5000](http://localhost:5000)
+5. The API will be available at [http://localhost:8080](http://localhost:5000)
 
 ## Folder Structure
 - `controllers/` — Route logic (User, CSV file, etc.)
