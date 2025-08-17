@@ -78,13 +78,26 @@ The MarketSafeAI backend is a modular Express.js REST API that powers authentica
    ```sh
    npm install
    ```
-3. Set up your `.env` file (see `.env.example` for required variables):
+3. Set up your `.env` file in the `Backend` directory with the following variables:
    ```env
-   PORT=5000
+   # MongoDB connection string
    MONGO_URI=your_mongodb_connection_string
+
+   # JWT secret for authentication
    JWT_SECRET=your_jwt_secret
-   EMAIL_USER=your_email@example.com
-   EMAIL_PASS=your_email_password
+
+   # Frontend URL (for CORS, email links, etc.)
+   FRONTEND_URL=http://localhost:5173
+
+   # SMTP configuration for sending emails
+   SMTP_HOST=smtp_server_host
+   SMTP_PORT=465
+   MAIL_USER=your_email@example.com
+   MAIL_PASSWORD=your_email_password_or_app_password
+   ADMIN_MAIL=admin_email@example.com
+
+   # (Optional) Token secret key (if used separately)
+   TOKEN_SECRET_KEY=your_token_secret_key
    ```
 4. Start the backend server:
    ```sh
