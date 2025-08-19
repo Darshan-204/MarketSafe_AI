@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Upload from './pages/Upload';
+import Dashboard from './pages/Dashboard';
 import './App.css';
 
 function Navbar({ theme, toggleTheme, setLoggedIn }) {
@@ -41,11 +42,14 @@ function Navbar({ theme, toggleTheme, setLoggedIn }) {
   )}
       {loggedIn && (
         <>
-          <NavLink to="/profile" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Dashboard</NavLink>
+          <NavLink to="/dashboard" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Dashboard</NavLink>
           <button
-            className="nav-link logout-link"
-            style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', padding: 0, margin: 0, textAlign: 'left' }}
+            className="nav-link logout-btn"
+            type="button"
             onClick={handleLogout}
+            style={{ width: '100%', textAlign: 'left', background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', padding: '0.3rem 0.7rem', borderRadius: 4, fontSize: '1.1rem', fontWeight: 500, marginBottom: '2.5rem', transition: 'color 0.2s' }}
+            onMouseOver={e => e.currentTarget.style.color = 'var(--navbar-link-hover)'}
+            onMouseOut={e => e.currentTarget.style.color = 'var(--navbar-link)'}
           >
             Logout
           </button>
@@ -88,6 +92,7 @@ function App() {
             <Route path="/register" element={loggedIn ? <Navigate to="/" /> : <Register />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/upload" element={<Upload />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </main>
       </div>

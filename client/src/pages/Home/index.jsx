@@ -68,33 +68,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="service-tiers-section redesigned">
-          <h2 className="tiers-title">Service Tiers</h2>
-          <div className="tiers-list">
-            <div className={`tier-card basic${selectedTier === 'basic' ? ' selected' : ''}`}>
-              <h3>Basic</h3>
-              <p>Implements fundamental privacy protections suitable for internal analyses and regions with moderate privacy regulations.</p>
-              <ul>
-                <li>Identifier removal and pseudonymization</li>
-                <li>Basic differential privacy (ϵ = 1.0)</li>
-                <li>Simple k-anonymity (k = 5)</li>
-              </ul>
-              <button className="tier-select-btn" onClick={() => handleSelectTier('basic')}>Select Basic (Free)</button>
-            </div>
-            <div className={`tier-card pro${selectedTier === 'pro' ? ' selected' : ''}`}>
-              <h3>Pro</h3>
-              <p>Provides advanced privacy guarantees suitable for strict regulatory environments and consumer-facing applications. Additional features include:</p>
-              <ul>
-                <li>Enhanced differential privacy (ϵ = 0.1)</li>
-                <li>Stronger k-anonymity (k = 20)</li>
-                <li>t-closeness for sensitive attributes</li>
-                <li>Advanced attack resistance testing</li>
-              </ul>
-              <button className="tier-select-btn" onClick={() => handleSelectTier('pro')}>Select Pro ($20/month)</button>
-            </div>
-          </div>
-          {error && <div className="tier-error">{error}</div>}
-        </section>
 
       </div>
     </div>
