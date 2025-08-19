@@ -85,6 +85,22 @@ body[data-theme='dark'] {
   transition: background 0.2s;
   box-shadow: 0 1px 4px 0 rgba(255,111,97,0.10);
 }
+.logout-btn {
+  margin-top: auto;
+  margin-bottom: 23px;
+  align-self: stretch;
+  background: var(--accent, #ff6f61);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(255,111,97,0.10);
+}
 .logout-btn:hover {
   background: #d32f2f;
 }

@@ -1,9 +1,21 @@
+/* Center login activity grid */
+.login-activity-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+/* Make profile page full page */
 .profile-container {
   min-height: 100vh;
+  width: 85vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none;
+  background: var(--main-bg, #fff);
+  /* Removed position: fixed and z-index so navbar is visible */
 }
 
 .profile-card {
@@ -11,12 +23,15 @@
   border-radius: 20px;
   box-shadow: 0 4px 24px 0 rgba(79,140,255,0.10);
   padding: 2.5rem 2.5rem 2rem 2.5rem;
-  min-width: 340px;
-  max-width: 420px;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  min-width: unset;
+  max-width: unset;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 .profile-title {
@@ -27,7 +42,7 @@
 }
 
 .profile-info {
-  width: 100%;
+  width: 95%;
   margin-bottom: 2rem;
 }
 

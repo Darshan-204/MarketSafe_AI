@@ -46,7 +46,7 @@
 }
 
 .home-card.redesigned {
-  background: linear-gradient(120deg, #e3eaff 0%, #b3c6ff 40%, #4f8cff 100%);
+  background: linear-gradient(120deg, #50c7f7 0%, #4974f5 40%, #50ead6 100%);
   color: var(--text, #222);
   box-shadow: 0 8px 32px 0 rgba(79,140,255,0.18), 0 1.5px 4px 0 rgba(255,111,97,0.10);
   border-top-right-radius: 40px;

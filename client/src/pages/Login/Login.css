@@ -133,3 +133,7 @@
 .login-form button:hover {
   background: #0056b3;
 }
+body[data-theme='light'] .vertical-bg-gradient {
+  background: linear-gradient(180deg, #13a8e7 0%, #1a237e 100%);
+  border-radius: 40px;
+}
